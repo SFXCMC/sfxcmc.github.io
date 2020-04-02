@@ -1,1 +1,1 @@
-# sfxcmc.github.io
+# SFXC Mathematics Club
