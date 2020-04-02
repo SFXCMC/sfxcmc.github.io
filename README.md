@@ -1,4 +1,5 @@
 echo "# sfxcmc.github.io" >> README.md
+$ git add index.html
 git init
 git add README.md
 git commit -m "first commit"
