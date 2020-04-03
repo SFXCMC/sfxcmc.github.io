@@ -1,5 +1,5 @@
 footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -7,4 +7,9 @@ footer {
     color: white;
     text-align: center;
     font-size: xx-large;
+    margin-bottom: 0px;
  }
+
+ body {
+    margin-bottom: 0px;
+  }
