@@ -1,6 +1,5 @@
 div{
     text-align:left;
-    padding:20px;
     margin-top:30px;
     background-color:white;
     height:auto;
@@ -8,13 +7,16 @@ div{
 }
 
 h1{
+    padding:0px 200px 0px;
     font-size:50px;
 }
 
 h2{
+    padding:0px 200px 0px;
     font-size:30px;
 }
 
 p{
+    padding:0px 200px 0px;
     font-size:20px;
 }
