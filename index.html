@@ -35,18 +35,19 @@ img.resize{
   height:40%;
 }
 
-#copyright {
-	float: left;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	text-align: center;
-  font-size: xx-large;
-	bottom: 0px;
-	width: 100%;
-  color: white ;
-}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+ }
 
 </style>
+  <link rel="stylesheet" type="text/css" href="footer.css">
 </head>
 <body>
 
@@ -57,7 +58,7 @@ img.resize{
   <li><a href="#home">Home</a></li>
 </ul>
 
-<div style="padding:20px;margin-top:30px;background-color:black;height:auto;color: white;">
+<div style="padding:20px;margin-top:30px;background-color:black;height:auto + 150px;color: white;">
   <img class="resize" src="Image/Logo/mc3.png" alt="Math Club Logo">
   <h1>Fixed Top Navigation Bar</h1>
   <h2>Scroll this page to see the effect</h2>
@@ -74,8 +75,8 @@ img.resize{
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
   <p>Some text some text some text some text..</p>
-  <div id="copyright">
-		Created by SFXC Mathematics Club
-	</div>
+  <footer>
+    Created by SFXC Mathematics Club
+  </footer>
 </body>
 </html>
