@@ -33,3 +33,18 @@ img.resize{
     margin-left: auto;
     margin-right: auto;
   }
+
+  li{
+      color: #000;
+      text-align: left;
+      font-size: 20px;
+  }
+
+  ul.s {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+  }
