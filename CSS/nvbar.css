@@ -1,6 +1,9 @@
-body {margin:0;}
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-ul.nv {
+.nv {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -11,18 +14,45 @@ ul.nv {
   width: 100%;
 }
 
-li.nv {
-  float: right;
-}
-
-li.nv a {
+.nv a {
+  float: left;
   display: block;
-  color: white;
+  color: #f2f2f2;
   text-align: center;
-  padding: 7px 7px;
+  padding: 15px 15px;
   text-decoration: none;
+  font-size: medium;
 }
 
-li a:hover:not(.active) {
+.nv a:hover {
   background-color: #111;
 }
+
+
+.nv .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nv a {display: none;}
+  .nv a.icon {
+    float: left;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nv.responsive {position: relative;}
+  .nv.responsive .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .nv.responsive a {
+    float: none;
+    display: flex; 
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
