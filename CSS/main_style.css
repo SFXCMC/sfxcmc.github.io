@@ -54,3 +54,10 @@ ul.s {
     color: black;
     font-size: 20px;
 }
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: black;  
+    background-color: black; 
+}
