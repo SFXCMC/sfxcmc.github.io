@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>SFXC Mathematics Club </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel = "shortcut icon" type="image/png" href="Image/Logo/mc1.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +11,25 @@
   <link rel="stylesheet" type="text/css" href="CSS/main_style.css">
 </head>
 <body>
-  <ul class="nv">
-    <li class = "nv"><a href="MGT/mgt.html" title ="SFXC Mathematics Club - MGT">MGT</a></li> 
-    <li class = "nv"><a href="Challenge/challenge.html" title ="SFXC Mathematics Club - Monthly Challenge">Monthly Challenge</a></li> 
-    <li class = "nv"><a href="us/about_us.html" title="SFXC Mathematics Club - About us">About us</a></li> 
-    <li class = "nv"><a href="index.html" title="SFXC Mathematics Club" >Home</a></li>
-  </ul>
+  <script>
+    function show_ele() {
+      var x = document.getElementById("check");
+      if (x.className === "nv") {
+        x.className += " responsive";
+      } else {
+        x.className = "nv";
+      }
+    }
+    </script>
+  <div class="nv" id="check">
+    <a href="index.html" title="SFXC Mathematics Club" >Home</a>
+    <a href="us/about_us.html" title="SFXC Mathematics Club - About us">About us</a> 
+    <a href="Challenge/challenge.html" title ="SFXC Mathematics Club - Monthly Challenge">Monthly Challenge</a>
+    <a href="MGT/mgt.html" title ="SFXC Mathematics Club - MGT">MGT</a> 
+    <a href="javascript:void(0);" class="icon" onclick="show_ele()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
   <img class="resize" src="Image/Logo/mc3.png" alt="Math Club Logo">
   <div class="text">
     <h1>SFXC Mathematics Club</h1>
@@ -29,3 +43,4 @@
   </footer>
 </body>
 </html>
+
