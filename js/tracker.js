@@ -72,7 +72,9 @@ if (!isMobileTablet()) {
                         })
                     }),
                     a = function () {
-                        t && t.parentNode && (t.contentDocument.defaultView.removeEventListener("resize", o), t.parentNode.removeChild(t), t = void 0, n = [])
+                        t && t.parentNode && (t.contentDocument.defaultView.removeEventListener("resize", o),
+                            t.parentNode.removeChild(t),
+                            t = void 0, n = [])
                     };
                 return {
                     element: e, bind: function (r) {
@@ -93,69 +95,102 @@ if (!isMobileTablet()) {
                     },
                     destroy: a,
                     unbind: function (e) {
-                        var o = n.indexOf(e); -1 !== o && n.splice(o, 1), 0 === n.length && t && a()
+                        var o = n.indexOf(e); -1 !== o && n.splice(o, 1),
+                            0 === n.length && t && a()
                     }
                 }
             }
-        });
+        }
+        );
         e(r);
         r.createSensor;
         var a = t(function (e, t) {
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }),
+            }
+            ),
                 t.createSensor = void 0;
             var n, i = (n = o) && n.__esModule ? n : { default: n };
             t.createSensor = function (e) {
                 var t = void 0, n = [], o = (0, i.default)(function () {
-                    n.forEach(function (t) { t(e) })
-                }),
+                    n.forEach(
+                        function (t) {
+                            t(e)
+                        }
+                    )
+                }
+                ),
                     r = function () {
-                        t.disconnect(), n = [], t = void 0
+                        t.disconnect(),
+                            n = [],
+                            t = void 0
                     };
                 return {
                     element: e, bind: function (i) {
                         t || (t = function () {
                             var t = new ResizeObserver(o);
-                            return t.observe(e), o(), t
-                        }()), -1 === n.indexOf(i) && n.push(i)
+                            return t.observe(e),
+                                o(),
+                                t
+                        }()),
+                            -1 === n.indexOf(i) && n.push(i)
                     }, destroy: r, unbind: function (e) {
-                        var o = n.indexOf(e); -1 !== o && n.splice(o, 1), 0 === n.length && t && r()
+                        var o = n.indexOf(e);
+                        -1 !== o && n.splice(o, 1),
+                            0 === n.length && t && r()
                     }
                 }
             }
         });
         e(a); a.createSensor;
         var s = t(function (e, t) {
-            Object.defineProperty(t, "__esModule", { value: !0 }), t.createSensor = void 0; t.createSensor = "undefined" != typeof ResizeObserver ? a.createSensor : r.createSensor
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }),
+                t.createSensor = void 0;
+            t.createSensor = "undefined" != typeof ResizeObserver ? a.createSensor : r.createSensor
         });
         e(s);
         s.createSensor;
         var u = t(function (e, t) {
-            Object.defineProperty(t, "__esModule", { value: !0 }), t.removeSensor = t.getSensor = void 0; var o, r = (o = n) && o.__esModule ? o : { default: o };
+            Object.defineProperty(t, "__esModule", { value: !0 }),
+                t.removeSensor = t.getSensor = void 0;
+            var o, r = (o = n) && o.__esModule ? o : { default: o };
             var a = {}; t.getSensor = function (e) {
                 var t = e.getAttribute(i.SizeSensorId);
                 if (t && a[t])
-                    return a[t]; var n = (0, r.default)(); e.setAttribute(i.SizeSensorId, n); var o = (0, s.createSensor)(e);
+                    return a[t]; var n = (0, r.default)();
+                e.setAttribute(i.SizeSensorId, n);
+                var o = (0, s.createSensor)(e);
                 return a[n] = o, o
             },
                 t.removeSensor = function (e) {
                     var t = e.element.getAttribute(i.SizeSensorId);
-                    e.element.removeAttribute(i.SizeSensorId), e.destroy(), t && a[t] && delete a[t]
+                    e.element.removeAttribute(i.SizeSensorId),
+                        e.destroy(),
+                        t && a[t] && delete a[t]
                 }
         });
         e(u);
-        u.removeSensor, u.getSensor;
+        u.removeSensor,
+            u.getSensor;
         var c = t(function (e, t) {
-            Object.defineProperty(t, "__esModule", { value: !0 }),
-                t.clear = t.bind = void 0; t.bind = function (e, t) {
-                    var n = (0, u.getSensor)(e);
-                    return n.bind(t), function () { n.unbind(t) }
-                },
-                    t.clear = function (e) {
-                        var t = (0, u.getSensor)(e);
-                        (0, u.removeSensor)(t)
-                    }
+            Object.defineProperty(t,
+                "__esModule",
+                {
+                    value: !0
+                }),
+                t.clear = t.bind = void 0;
+            t.bind = function (e, t) {
+                var n = (0, u.getSensor)(e);
+                return n.bind(t), function () {
+                    n.unbind(t)
+                }
+            },
+                t.clear = function (e) {
+                    var t = (0, u.getSensor)(e);
+                    (0, u.removeSensor)(t)
+                }
         });
         e(c);
         var l = c.clear,
@@ -174,14 +209,17 @@ if (!isMobileTablet()) {
                 window.msCancelAnimationFrame ||
                 window.oCancelAnimationFrame ||
                 window.clearTimeout, m = function (e) {
-                    return new Array(e).fill(0).map(function (e, t) { return t })
-                }, h = Object.assign ||
-                    function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = arguments[t];
-                            for (var o in n) Object.prototype.hasOwnProperty.call(n, o) && (e[o] = n[o])
-                        } return e
-                    },
+                    return new Array(e).fill(0).map(function (e, t) {
+                        return t
+                    })
+                },
+            h = Object.assign ||
+                function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = arguments[t];
+                        for (var o in n) Object.prototype.hasOwnProperty.call(n, o) && (e[o] = n[o])
+                    } return e
+                },
             p = function () {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -216,8 +254,13 @@ if (!isMobileTablet()) {
                     },
                     this.el = t,
                     this.c = h({
-                        zIndex: -1, opacity: .5, color: "0,0,0", pointColor: "0,0,0", count: 99
-                    }, n),
+                        zIndex: -1,
+                        opacity: .5,
+                        color: "0,0,0",
+                        pointColor: "0,0,0",
+                        count: 99
+                    },
+                        n),
                     this.canvas = this.newCanvas(),
                     this.context = this.canvas.getContext("2d"),
                     this.points = this.randomPoints(),
@@ -228,8 +271,12 @@ if (!isMobileTablet()) {
             } return p(e, [{
                 key: "bindEvent", value: function () {
                     var e = this;
-                    d(this.el, function () { e.canvas.width = e.el.clientWidth, e.canvas.height = e.el.clientHeight }),
-                        this.onmousemove = window.onmousemove, window.onmousemove = function (t) {
+                    d(this.el, function () {
+                        e.canvas.width = e.el.clientWidth,
+                            e.canvas.height = e.el.clientHeight
+                    }),
+                        this.onmousemove = window.onmousemove,
+                        window.onmousemove = function (t) {
                             e.current.x = t.clientX - e.el.offsetLeft + document.scrollingElement.scrollLeft,
                                 e.current.y = t.clientY - e.el.offsetTop + document.scrollingElement.scrollTop,
                                 e.onmousemove && e.onmousemove(t)
@@ -248,7 +295,8 @@ if (!isMobileTablet()) {
                     return t.style.cssText = "display:block;position:absolute;top:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:" +
                         (e = this.c).zIndex +
                         ";opacity:" +
-                        e.opacity, t.width = this.el.clientWidth,
+                        e.opacity,
+                        t.width = this.el.clientWidth,
                         t.height = this.el.clientHeight,
                         this.el.appendChild(t), t
                 }
@@ -256,7 +304,8 @@ if (!isMobileTablet()) {
             {
                 key: "requestFrame",
                 value: function (e) {
-                    var t = this; this.tid = v(function () {
+                    var t = this;
+                    this.tid = v(function () {
                         return e.call(t)
                     })
                 }
