@@ -333,20 +333,26 @@ if (!isMobileTablet()) {
                                 r.xa *= r.x > n || r.x < 0 ? -1 : 1, r.ya *= r.y > o || r.y < 0 ? -1 : 1,
                                 t.fillStyle = "rgba(" + e.c.pointColor + ")",
                                 t.fillRect(r.x - .5, r.y - .5, 1, 1),
-                                u = f + 1; u < a.length; u++)null !== (s = a[u]).x && null !== s.y && (l = r.x - s.x, d = r.y - s.y, (v = l * l + d * d) < s.max && (s === i && v >= s.max / 2 && (r.x -= .03 * l, r.y -= .03 * d), c = (s.max - v) / s.max,
-                                    t.beginPath(),
-                                    t.lineWidth = c / 2,
-                                    t.strokeStyle = "rgba(" + e.c.color + "," + (c + .2) + ")",
-                                    t.moveTo(r.x, r.y), t.lineTo(s.x, s.y), t.stroke()))
-                        }), this.requestFrame(this.drawCanvas)
+                                u = f + 1;
+                                u < a.length; u++)null !== (s = a[u]).x && null !== s.y && (l = r.x - s.x, d = r.y - s.y,
+                                    (v = l * l + d * d) < s.max && (s === i && v >= s.max / 2 && (r.x -= .03 * l, r.y -= .03 * d),
+                                        c = (s.max - v) / s.max,
+                                        t.beginPath(),
+                                        t.lineWidth = c / 2,
+                                        t.strokeStyle = "rgba(" + e.c.color + "," + (c + .2) + ")",
+                                        t.moveTo(r.x, r.y), t.lineTo(s.x, s.y), t.stroke()))
+                        }),
+                        this.requestFrame(this.drawCanvas)
                 }
-                }, {
-                    key: "destroy", value: function () {
-                        l(this.el), window.onmousemove = this.onmousemove,
-                            window.onmouseout = this.onmouseout,
-                            f(this.tid), this.canvas.parentNode.removeChild(this.canvas)
-                    }
-                }]), e
+            },
+            {
+                key: "destroy", value: function () {
+                    l(this.el), window.onmousemove = this.onmousemove,
+                        window.onmouseout = this.onmouseout,
+                        f(this.tid), this.canvas.parentNode.removeChild(this.canvas)
+                }
+            }]),
+                e
         }();
         y.version = "2.0.4";
         var w, b;
