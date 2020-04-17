@@ -8,9 +8,9 @@ function isMobileTablet() {
 }
 if (!isMobileTablet()) {
     /**
-     * Copyright (c) 2016 hustcc
+     * Copyright (c) 2015 Hust.cc
      * License: MIT
-     * Version: v1.0.1
+     * Version: v2.0.4
      * GitHub: https://github.com/hustcc/canvas-nest.js
     **/
     !function () {
