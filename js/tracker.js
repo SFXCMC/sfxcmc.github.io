@@ -364,4 +364,41 @@ if (!isMobileTablet()) {
             count: Number(b.getAttribute("count")) || 99
         }))
     }();
+    /**
+         *Cursor effect
+         *Left click the mouse and there will have a math symbol show up
+        **/
+    var a_idx = 0;
+    jQuery(document).ready(function ($) {
+        $("body").click(function (e) {
+            let s1 = '\u221D'; //'∝' PROPORTIONAL TO
+            let s2 = '\u221E'; //'∞' INFINITY
+            let s3 = '\u2211'; //'∑' SUMMATION
+            let s4 = '\u2234'; //'∴' THEREFORE
+            let s5 = '\u2235'; //'∵' BECAUSE
+            let s6 = '\u03B8'; //'θ' THETA
+            var a = new Array(s1, s2, s3, s4, s5, s6);
+            var $i = $("<span/>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+            });
+            $("body").append($i);
+            $i.animate({
+                "top": y - 180,
+                "opacity": 0
+            },
+                1500,
+                function () {
+                    $i.remove();
+                });
+        });
+    });
 }
