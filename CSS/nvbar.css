@@ -33,7 +33,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .nv a {display: none;}
   .nv a.icon {
     float: left;
@@ -41,7 +41,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .nv.responsive {position: relative;}
   .nv.responsive .icon {
     position: absolute;
