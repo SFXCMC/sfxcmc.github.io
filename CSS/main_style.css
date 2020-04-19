@@ -63,21 +63,26 @@ hr {
 }
 
 @media screen and (max-width: 800px) {
-            .map-responsive {
-                overflow: hidden;
-                padding-bottom: 56.25%;
-                padding-left: 70%;
-                position: relative;
-                height: 0;
-            }
+    .map-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        padding-left: 70%;
+        position: relative;
+        height: 0;
+    }
 
-            .map-responsive iframe {
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                bottom: 8px;
-                right: 16px;
-            }
-        }
+    .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+    }
+}
+.information{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
