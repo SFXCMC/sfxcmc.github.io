@@ -1,0 +1,14 @@
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 0px;
+}
+
+body {
+    margin-bottom: 0px;
+}
